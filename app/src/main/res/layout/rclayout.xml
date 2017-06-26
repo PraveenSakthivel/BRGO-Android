@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:id="@+id/rcSwipe"
+    app:dragEdge="right"
+    app:mode="same_level">
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:text="Reminder"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:textColor="#ffffff"
+            android:id="@+id/reminderButton"
+            android:background="#ff9933"/>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@color/colorPrimary"
+            android:id="@+id/cellTitle"/>
+    </LinearLayout>
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F1F1F2</color>
+    <color name="colorPrimaryDark">#1995AD</color>
+    <color name="colorAccent">#d9b44a</color>
+    <color name="date_picker_text_color">#000000</color>
+</resources>

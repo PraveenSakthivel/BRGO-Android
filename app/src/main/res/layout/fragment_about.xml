@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.About"
+    android:background="@color/colorPrimary">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="BRGO delivers content from the BRRSD school websites to your phone in a mobile friendly format. It provides news and calendar information as well as teacher websites that can be navigated easily on mobile. The app also has the option to switch between schools easily and is saved immediately as your default. The app takes minimal data and loads quickly providing you with content as quickly as possible. Designed by Praveen Sakthivel, Artwork by Jason Shu."
+        android:textColor="@color/colorPrimaryDark"
+        android:padding="5dp"
+        android:typeface="serif"
+        android:textSize="16dp" />
+
+</FrameLayout>

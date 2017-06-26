@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_8862306c0afa591bcb14f58a3e5ba48fa85910d4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.0.0_173de095c62246d1ea68bce3b7c1424c0f1ecc3b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\libs\jsoup-1.9.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="edb0ddf3bd59dec0947f6eda75b6cf2264fc5e4b">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\2\jsoup-1.9.2_d0fd70558291717af7a5949e3840399be165838b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_f29ea9c8e4859a5c9ead7849b05490106f40d67d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_5aea4293048517bd1b7c359273ac9c407c8b71b4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\libs\gson-2.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\2\gson-2.3.1_0b393d21ce02a84d999a17018d872a1604570b6e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="035b5c36d8be4a6e7d837dd18bb6624fa1f24e86">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_11bf56ee96e205519e82566d9ccbe339e059f4f0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\.gradle\caches\modules-2\files-2.1\org.threeten\threetenbp\1.3.1\5769e9c27cd5ba74cd3a73785dde0bbb5a2d3c0d\threetenbp-1.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="5769e9c27cd5ba74cd3a73785dde0bbb5a2d3c0d">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\threetenbp-1.3.1_73c3e40c8eedcc5ba3f3fb731ee4d72aebd670f2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_abfbfd6fe9868608bd95bf4329bcd3c16b187a0e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.4.0_a96b20188cd10678aec05748a342d8ef3d1ddb91\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\exploded-aar\com.chauthai.swipereveallayout\swipe-reveal-layout\1.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="0383ea061ff92aff86cc8e899378170e19319a2c">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.chauthai.swipereveallayout-swipe-reveal-layout-1.4.0_71774420834e8ece3a56d50dc7eefbf8eff48a6c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient-android\4.3.5.1\eecbb0b998e77629862a13d957d552b3be58fc4e\httpclient-android-4.3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="eecbb0b998e77629862a13d957d552b3be58fc4e">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\httpclient-android-4.3.5.1_f4bad3c2498c20db3cc5b46dacc45d341ca5b028\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="bb8f980effb0809a145695a0d3150b104c4df5f1">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d67550ffb07d0f2654186bb6129b06ec7fd4d11f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.0.0_792ae7df9244e11396af00174ff6a1df42586053\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\exploded-aar\solar.blaz\week-date-picker\1.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="c4786732c2b494f02d02330164623988bf6d8abf">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\solar.blaz-week-date-picker-1.2_2797214a7ae268ed31c7a86900e659cf54f5151b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_f695de024f7d43e5d07a4e4917f674df222f343f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_5329a03b8eb78379a439dda90f9371a8af16fa6e\classes.dex" />
+    </item>
+
+</items>

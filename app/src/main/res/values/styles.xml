@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:dropDownListViewStyle"> @style/menuTheme</item>
+    </style>
+    <style name="itemFont">
+        <item name="android:typeface">serif</item>
+    </style>
+    <style name="monthLabel">
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="menuTheme" parent="@style/Widget.AppCompat.Light.ListView.DropDown">>
+        <item name="android:typeface">serif</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+        <item name="android:actionMenuTextAppearance">@style/menuTheme</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+        <item name="android:actionMenuTextAppearance">@style/menuTheme</item>
+        </style>
+    <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/colorPrimaryDark</item>
+    </style>
+
+</resources>

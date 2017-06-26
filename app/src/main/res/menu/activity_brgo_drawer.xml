@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_News"
+            android:title="News"/>
+        <item
+            android:id="@+id/nav_Calendar"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/nav_Websites"
+            android:title="Websites" />
+        <item
+            android:id="@+id/nav_Handbook"
+            android:title="School Handbook" />
+        <item
+            android:id="@+id/nav_Planner"
+            android:title="Homework Planner" />
+        <item
+            android:id="@+id/nav_ID"
+            android:title="Student ID" />
+        <item
+            android:id="@+id/nav_About"
+            android:title="About" />
+    </group>
+
+</menu>

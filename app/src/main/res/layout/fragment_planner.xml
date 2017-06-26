@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="layout.Planner">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/monthLabel"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/date_picker_text_color"
+        android:textSize="22sp"
+        android:paddingBottom="10dp" />
+
+    <solar.blaz.date.week.WeekDatePicker
+        android:id="@+id/date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="18sp"
+        android:textColor="@color/date_picker_text_color"
+        app:wdp_labelTextSize="12sp"
+        app:wdp_labelPadding="5dp"
+        app:wdp_dayBackground="@drawable/date_picker_day_bg"
+        app:wdp_indicatorDrawable="@drawable/date_picker_indicator"
+        app:wdp_firstDayOfWeek="monday"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_weight="1">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/colorAccent"
+                android:dividerHeight="1dp"
+                android:id="@+id/PlannerTable"
+                tools:context="layout.Planner"
+                android:gravity="bottom|end">
+            </ListView>
+        </ScrollView>
+</LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:id="@+id/addRowButton"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="10dp" />
+
+</FrameLayout>

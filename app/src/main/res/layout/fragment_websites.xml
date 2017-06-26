@@ -1,0 +1,49 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/colorAccent"
+            android:dividerHeight="1dp"
+            android:id="@+id/searchView"
+            android:gravity="top|start"
+            android:clickable="true" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"/>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/webRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@color/colorAccent"
+    android:dividerHeight="1dp"
+    android:id="@+id/WebsiteTable"
+    tools:context="layout.Websites"
+    android:gravity="bottom|end">
+</ListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:src="@drawable/ic_menu_gallery"
+        android:id="@+id/dataToggle"
+        android:background="@color/colorAccent"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="10dp"
+        android:clickable="true">
+
+    </android.support.design.widget.FloatingActionButton>
+</FrameLayout>
