@@ -90,7 +90,7 @@ public class Websites extends Fragment implements SearchView.OnQueryTextListener
         }
 
         mListView = (ListView) view.findViewById(R.id.WebsiteTable);
-        final StandardCellAdapter adapter = new StandardCellAdapter(getActivity(), data, 1,this,null);
+        final StandardCellAdapter adapter = new StandardCellAdapter(getActivity(), data, 1,this);
         fDataSet = data;
         mData = data;
         mListView.setAdapter(adapter);
@@ -111,7 +111,7 @@ public class Websites extends Fragment implements SearchView.OnQueryTextListener
             public void onRefresh() {
                 try {
                     mData = getData();
-                    mAdapter = new StandardCellAdapter(getContext(), mData, 1,webTable,null);
+                    mAdapter = new StandardCellAdapter(getContext(), mData, 1,webTable);
                     mListView.setAdapter(mAdapter);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -127,6 +127,7 @@ public class Websites extends Fragment implements SearchView.OnQueryTextListener
         mSearchView.setIconifiedByDefault(true);
     }
 
+    //Gets the teacher names and website links
     private ArrayList<InfoArticle> getData() throws IOException {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getContext());
         int school = sharedPref.getInt("School", 14273);
@@ -136,6 +137,7 @@ public class Websites extends Fragment implements SearchView.OnQueryTextListener
         return Connection.Results;
     }
 
+    //search functionality
     @Override
     public boolean onQueryTextChange(String newText) {
 
@@ -147,6 +149,7 @@ public class Websites extends Fragment implements SearchView.OnQueryTextListener
         return true;
     }
 
+    //Splits the info article array list into two string array lists
     public ArrayList<InfoArticle> toData(ArrayList<String> t, ArrayList<String> d) {
         ArrayList<InfoArticle> temp = new ArrayList<InfoArticle>();
         if (t.size() == 0) {
@@ -164,6 +167,8 @@ public class Websites extends Fragment implements SearchView.OnQueryTextListener
     public boolean onQueryTextSubmit(String query) {
         return false;
     }
+
+    //When the Floating Action button is clicked change the view to saved Teachers or standard data set
     private void toggleView(){
         if (!toggle) {
             SharedPreferences sharedPref = getContext().getSharedPreferences("MY_PREFERENCES",Context.MODE_PRIVATE);
@@ -174,15 +179,17 @@ public class Websites extends Fragment implements SearchView.OnQueryTextListener
                 prefs = new ArrayList<InfoArticle>();
                 prefs.add(new InfoArticle("Slide To Save Teachers",""));
             }
-            mAdapter = new StandardCellAdapter(getContext(),prefs,2,this,null);
+            mAdapter = new StandardCellAdapter(getContext(),prefs,2,this);
             mListView.setAdapter(mAdapter);
             toggle = true;
         } else {
-            mAdapter = new StandardCellAdapter(getContext(), mData, 1,this,null);
+            mAdapter = new StandardCellAdapter(getContext(), mData, 1,this);
             mListView.setAdapter(mAdapter);
             toggle = false;
         }
     }
+
+    //Function accessed by the Standard Cell Adapter to display a webpage
     public void displayWebpage(String Link){
         WebsiteDisplay fullView = WebsiteDisplay.newInstance(Link);
         FragmentTransaction transfer = getActivity().getSupportFragmentManager().beginTransaction();

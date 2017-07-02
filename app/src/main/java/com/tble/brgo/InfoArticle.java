@@ -1,6 +1,6 @@
 package com.tble.brgo;
 
-/**
+/** Class used to store two strings together
  * Created by Praveen on 6/23/16.
  */
 public class InfoArticle {

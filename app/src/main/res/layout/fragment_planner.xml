@@ -39,15 +39,16 @@
             android:layout_height="wrap_content"
             android:scrollbars="none"
             android:layout_weight="1">
-            <ListView
+            <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:divider="@color/colorAccent"
+                android:background="@android:color/white"
                 android:dividerHeight="1dp"
                 android:id="@+id/PlannerTable"
                 tools:context="layout.Planner"
                 android:gravity="bottom|end">
-            </ListView>
+            </TableLayout>
         </ScrollView>
 </LinearLayout>
     <android.support.design.widget.FloatingActionButton

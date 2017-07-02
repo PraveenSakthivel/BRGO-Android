@@ -41,7 +41,6 @@ import android.media.Image;
 public class StudentID extends Fragment {
     String mCurrentPhotoPath;
     Uri mPhotoURI;
-    static final int REQUEST_IMAGE_CAPTURE = 1;
     static final int REQUEST_TAKE_PHOTO = 1;
     ImageView picView;
     FloatingActionButton button;
@@ -92,18 +91,15 @@ public class StudentID extends Fragment {
         picView.setImageURI(Uri.parse(sharedPref.getString("StudentID","")));
         return view;
     }
+    //Starts the picture process
     public void takePicture(){
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
         if (takePictureIntent.resolveActivity(getContext().getPackageManager()) != null) {
-            // Create the File where the photo should go
             File photoFile = null;
             try {
                 photoFile = createImageFile();
             } catch (IOException ex) {
-                // Error occurred while creating the File
             }
-            // Continue only if the File was successfully created
             if (photoFile != null) {
                 try {
                     mPhotoURI = Uri.fromFile(photoFile);
@@ -118,6 +114,8 @@ public class StudentID extends Fragment {
 
 
     }
+
+    //creates a permanently stored file for the image to be saved
     private File createImageFile() throws IOException {
         // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
@@ -129,6 +127,8 @@ public class StudentID extends Fragment {
         mCurrentPhotoPath = image.getAbsolutePath();
         return image;
     }
+
+    //saves the file
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(resultCode == android.app.Activity.RESULT_OK){

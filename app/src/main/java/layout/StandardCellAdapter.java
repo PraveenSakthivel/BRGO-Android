@@ -37,22 +37,24 @@ import org.w3c.dom.Text;
 public class StandardCellAdapter extends ArrayAdapter<InfoArticle> implements Filterable {
     public ArrayList<InfoArticle> orig;
     public ArrayList<InfoArticle> Teachers;
+    public ArrayList<EditText> editors;
     public SwipeRevealLayout swipeV;
     public TextView deleteButton;
     public TextView saveButton;
     public TextView reminderButton;
     public int tableType;
     public displayInterface activity;
-    public reminderInterface sendRem;
     public Context ct;
-    public StandardCellAdapter(Context context, ArrayList<InfoArticle> titles, int tableType, displayInterface inter, reminderInterface rem) {
+
+    //NOT IDEAL. Adapter should be split into multiple adapters instead of accounting for every case
+    public StandardCellAdapter(Context context, ArrayList<InfoArticle> titles, int tableType, displayInterface inter) {
         super(context, 0, titles);
         this.Teachers = titles;
         this.tableType = tableType;
         saveButton = new TextView(context);
         deleteButton = new TextView(context);
+        editors = new ArrayList<EditText>();
         activity = inter;
-        sendRem = rem;
         ct = context;
     }
 
@@ -66,10 +68,12 @@ public class StandardCellAdapter extends ArrayAdapter<InfoArticle> implements Fi
         EditText edit = new EditText(getContext());
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
+            //Standard textbox filled table
             if (tableType == 0) {
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.nclayout, parent, false);
                 Ctitle = (TextView) convertView.findViewById(R.id.cellTitle);
             }
+            //Table with textboxes that can be slid to the right to reveal a save button
             else if(tableType == 1){
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.sclayout, parent, false);
                 Ctitle = (TextView) convertView.findViewById(R.id.cellTitle);
@@ -80,33 +84,7 @@ public class StandardCellAdapter extends ArrayAdapter<InfoArticle> implements Fi
                 TagHolder.Cell = Ctitle;
                 convertView.setTag(TagHolder);
             }
-            else if(tableType ==3){
-                convertView = LayoutInflater.from(getContext()).inflate(R.layout.rclayout, parent, false);
-                edit = (EditText) convertView.findViewById(R.id.cellTitle);
-                edit.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
-
-                    @Override
-                    public void onTextChanged(CharSequence s, int start, int before, int count) {
-                        Teachers.remove
-                        sendRem.saveData();
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
-                });
-                TagHolder = new Holder();
-                swipeV = (SwipeRevealLayout)convertView.findViewById(R.id.rcSwipe);
-                reminderButton = (TextView)convertView.findViewById(R.id.reminderButton);
-                TagHolder.Reminder = reminderButton;
-                TagHolder.editSpace = edit;
-                convertView.setTag(TagHolder);
-            }
+            //Table with textboxes that can be slid to reveal a delete button
             else{
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.tclayout, parent, false);
                 Ctitle = (TextView) convertView.findViewById(R.id.cellTitle);
@@ -144,8 +122,9 @@ public class StandardCellAdapter extends ArrayAdapter<InfoArticle> implements Fi
                 @Override
                 public void onClick(View v) {
                     deleteTeacher((int)v.getTag());
+                    //Adds default case if there are no more saved Teachers
                     if(Teachers.size() == 0)
-                        Teachers.add(new InfoArticle("Slide to Save Teachers", "google.com"));
+                        Teachers.add(new InfoArticle("Slide to Save Teachers", ""));
                     notifyDataSetChanged();
                 }
             });
@@ -157,23 +136,7 @@ public class StandardCellAdapter extends ArrayAdapter<InfoArticle> implements Fi
                 }
             });
         }
-        else if(tableType == 3){
-            TagHolder.Reminder.setTag(position);
-            reminderButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    sendRem.addReminder((int)(int)v.getTag());
-                }
-            });
-            TagHolder.editSpace.setTag(position);
-
-        }
         Typeface customFont = Typeface.SERIF;
-        if(tableType == 3){
-            edit.setText(title);
-            edit.setTypeface(customFont);
-
-        }
         Ctitle.setTypeface(customFont);
         Ctitle.setText(title);
         return convertView;
@@ -215,17 +178,6 @@ public class StandardCellAdapter extends ArrayAdapter<InfoArticle> implements Fi
     public void notifyDataSetChanged() {
         super.notifyDataSetChanged();
     }
-
-    public ArrayList<InfoArticle> toIA(ArrayList<String> data){
-        ArrayList<InfoArticle> converted = new ArrayList<InfoArticle>();
-        for(String a: data)
-        {
-            converted.add(new InfoArticle(a,""));
-        }
-        return converted;
-    }
-
-
     @Override
     public int getCount() {
         return Teachers.size();
@@ -285,11 +237,11 @@ public class StandardCellAdapter extends ArrayAdapter<InfoArticle> implements Fi
         if(Teachers.size() == 0)
             Teachers.add(new InfoArticle("Slide To Save Teachers",""));
     }
+
+    //Holder class to save specific childs for a list cell
     class Holder{
         TextView Delete;
         TextView Save;
-        TextView Reminder;
         TextView Cell;
-        EditText editSpace;
     }
 }

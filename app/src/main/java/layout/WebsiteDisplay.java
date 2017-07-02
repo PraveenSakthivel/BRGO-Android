@@ -17,6 +17,7 @@ import com.tble.brgo.R;
  * A simple {@link Fragment} subclass.
  * Use the {@link WebsiteDisplay#newInstance} factory method to
  * create an instance of this fragment.
+ * The browser that displays teacher websites
  */
 public class WebsiteDisplay extends Fragment {
     // TODO: Rename parameter arguments, choose names that match

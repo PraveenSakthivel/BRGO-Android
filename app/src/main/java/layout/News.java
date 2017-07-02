@@ -71,13 +71,13 @@ public class News extends Fragment {
         }
         fDataSet = data;
         mListView = (ListView) view.findViewById(R.id.NewsTable);
-        mAdapter = new StandardCellAdapter(getActivity(), data, 0,null,null);
+        mAdapter = new StandardCellAdapter(getActivity(), data, 0,null);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ContentDisplay fragment = ContentDisplay.newInstance(fDataSet.get(position).title,fDataSet.get(position).description);
                 FragmentTransaction transfer = getActivity().getSupportFragmentManager().beginTransaction();
-                transfer.replace(R.id.fragmentcontainer, fragment).addToBackStack("tag").commit();
+                transfer.replace(R.id.fragmentcontainer, fragment).addToBackStack("tag").commit(); //tag to allow backwards navigation
             }
         });
         mListView.setAdapter(mAdapter);
@@ -87,7 +87,7 @@ public class News extends Fragment {
             public void onRefresh() {
                 try {
                     fDataSet = getData();
-                    mAdapter = new StandardCellAdapter(getContext(), fDataSet, 0,null,null);
+                    mAdapter = new StandardCellAdapter(getContext(), fDataSet, 0,null);
                     mListView.setAdapter(mAdapter);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -98,9 +98,10 @@ public class News extends Fragment {
         return view;
     }
 
+    //Get the news articles from live feed
     public ArrayList<InfoArticle> getData() throws IOException{
         HTMLPull Connection = new HTMLPull();
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getContext());
-        return Connection.XmlPull("brrsd.org/apps/news/news_rss.jsp?id=0",sharedPref.getInt("School", 14273));
+        return Connection.XmlPull("brrsd.org/apps/news/news_rss.jsp?id=0",sharedPref.getInt("School", 14273)); //OnCourse school identifier
     }
 }

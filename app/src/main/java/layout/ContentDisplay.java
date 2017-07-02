@@ -12,7 +12,8 @@ import android.widget.TextView;
 
 import com.tble.brgo.R;
 
-/**
+/** Generic display used to display a small title and larger description box
+ * Used by Calendar and News fragments
  * A simple {@link Fragment} subclass.
  * Use the {@link ContentDisplay#newInstance} factory method to
  * create an instance of this fragment.

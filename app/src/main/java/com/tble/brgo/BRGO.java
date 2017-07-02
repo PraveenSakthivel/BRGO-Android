@@ -24,7 +24,6 @@ import layout.Handbook;
 import layout.News;
 import layout.Planner;
 import layout.StudentID;
-import layout.Temp;
 import layout.Websites;
 import layout.About;
 
@@ -68,12 +67,14 @@ public class BRGO extends AppCompatActivity
          getMenuInflater().inflate(R.menu.brgo, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
+    //Update the title of the navigation bar based on what school has been selected
     public void updateTitle(){
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
         SharedPreferences.Editor editor = sharedPref.edit();
         switch(sharedPref.getInt("School",14273))
         {
-            case 14273:
+            case 14273: //OnCourse school code for this specific school
                 getSupportActionBar().setTitle("High School");
                 break;
             case 14276:
@@ -120,7 +121,6 @@ public class BRGO extends AppCompatActivity
         int id = item.getItemId();
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
         SharedPreferences.Editor editor = sharedPref.edit();
-        //noinspection SimplifiableIfStatement
         if (id == R.id.S14273) {
          editor.putInt("School", 14273);
             editor.commit();
@@ -193,7 +193,7 @@ public class BRGO extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(MenuItem item) { //Handles switching between view
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         Fragment fragment;
@@ -220,7 +220,7 @@ public class BRGO extends AppCompatActivity
                 fragment = Planner.newInstance();
                 break;
             default:
-                fragment = Temp.newInstance();
+                fragment = News.newInstance();
                 break;
         }
         FragmentTransaction transfer = getSupportFragmentManager().beginTransaction();

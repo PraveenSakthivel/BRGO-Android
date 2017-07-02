@@ -12,6 +12,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\libs\jsoup-1.9.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="edb0ddf3bd59dec0947f6eda75b6cf2264fc5e4b">
+        <dex dex="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\transforms\dex\debug\folders\1000\2\jsoup-1.9.2_cb34e8990b69c8bd97b8dc6c1a76dcd1219c2332\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\libs\gson-2.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\transforms\dex\debug\folders\1000\2\gson-2.3.1_2ac490be37554b9dbb044b1c22ed62bb17533ce1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -39,12 +57,75 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Pr_sa\.android\build-cache\2a7e6679555cc1ac637ac954a57844af9e1e2478\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_820c96bebb92db3496fc8ef1d2297c656b33af2d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\.android\build-cache\66abe18241602f6ca2c2471aeb56da7c38eca406\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_07f529951bb1ba49f33f3db616361754856adecb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\.android\build-cache\4df854c9107c9b8902a6c064a9073c1cc37fe0c0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c9509e4edf774692d06dbeebc58f31d96da2860e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_1f8affe94ed5b9d0557c4bd3cc628ff27251fda5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
         sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
         <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_5aea4293048517bd1b7c359273ac9c407c8b71b4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\.android\build-cache\0dc295a034f4cd579706821363f5e9e1a66cadbb\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_27a25ff604ec0883e14c82e7428b2132d286cb09\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\.android\build-cache\01a7359b86d30e6b4c600f57a6785d8357258973\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_eb336d303ff6a077d0ddea0e09c9d689325ca5b3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\.android\build-cache\5197c0675ed74f0e3d8d78dc0f836f1755f1406e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_adcf1c33edc5e7bec9439a011ed0899de9dfa8c1\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -57,12 +138,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Pr_sa\.android\build-cache\5197c0675ed74f0e3d8d78dc0f836f1755f1406e\output\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_42cfd2ecd17a8af87963b0e39ce1f0838367a2a6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
         sha1="035b5c36d8be4a6e7d837dd18bb6624fa1f24e86">
         <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_11bf56ee96e205519e82566d9ccbe339e059f4f0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="abb5a14fef30a95aeaf522ccd2cae1b4f190ac56">
+        <dex dex="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_db6519883a9650e349925e2cffccafa4884e3e58\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -117,6 +216,15 @@
         revision="24.0.0"
         sha1="bb8f980effb0809a145695a0d3150b104c4df5f1">
         <dex dex="C:\Users\Pr_sa\Documents\AndroidStudioProjects\BRGO\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d67550ffb07d0f2654186bb6129b06ec7fd4d11f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pr_sa\.android\build-cache\b0e26ab08df3aba5946e89892462672c4c47154d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Pr_sa\Documents\GitHub\BRGO-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d8553d05171a75e1722435c423ebdbc8e8323b98\classes.dex" />
     </item>
     <item
         is-multidex="true"

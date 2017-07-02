@@ -52,6 +52,8 @@ public class HTMLPull {
     public HTMLPull(){
 
     }
+
+    //Function that pulls the title and description elements from any XML RSS Feed
     public ArrayList XmlPull(String Rssfeed, int school) throws IOException{
         ArrayList<InfoArticle> fullnews = new ArrayList<InfoArticle>();
         ArrayList<String> newstitle = new ArrayList<String>();
@@ -65,33 +67,13 @@ public class HTMLPull {
         for (Element item : items) {
             String title = extractData(item, "title", "<NO TITLE>");
             String description = extractData(item, "description", "<NO DESCRIPTION>");
-
-            /**if (description.endsWith("... (Continued)")) {
-                // Fetch full description
-                String newsUrl = extractData(item, "guid", null);
-                description += " [UNABLE TO GET FULL DESCRIPTION]";
-
-                if (newsUrl != null) {
-                    Document news = Jsoup.connect(newsUrl).get();
-                    Element newsContent = news.select("#content > table > tbody > tr > td").first();
-
-                    if (newsContent != null) {
-                        Elements tmp = newsContent.select("span.sw-newsHeader");
-                        title = tmp.text();
-                        tmp.remove();
-
-                        description = newsContent.text();
-                    }
-                }
-            }
-*/
             fullnews.add(new InfoArticle(title,description));
         }
         return fullnews;
     }
 
     /**
-     *
+     * Extracts the paramter element from the data object or returns the defaultValue if null
      * @param item taken from JSoup parse of webpage
      * @param dataName Item to be extracted
      * @param defaultValue default value of item if there are no items
@@ -111,7 +93,7 @@ public class HTMLPull {
     }
     /**
      *
-     * @return the name of all faculty members of the school saved in the School.txt file
+     * Sends the request to OnCourse System servers for the Teacher websites information
      * @throws IOException
      */
     public void getStaff(int School) throws IOException
@@ -143,7 +125,7 @@ public class HTMLPull {
 
     /**
      *
-     * @return an ArrayList of teacher website links based on the school value in school.txt
+     * Attempts to read the input stream with the JsonReader Class and closes  when completed
      * @throws IOException
      */
     public void readJsonStream(InputStream in) throws IOException {
@@ -155,6 +137,7 @@ public class HTMLPull {
         }
     }
 
+    //Loops throw every array found in the JsonStream
     public void readArray(JsonReader reader) throws IOException {
 
         reader.beginArray();
@@ -165,6 +148,7 @@ public class HTMLPull {
         //return messages;
     }
 
+    //Parses the array for the desired teacher name and school webpage link
     public void readMessage(JsonReader reader) throws IOException {
         reader.beginObject();
         while (reader.hasNext()) {
@@ -185,11 +169,12 @@ public class HTMLPull {
                 readArray(reader);
             }
             else if (name.equals("id")){
-                id = "https://www.oncoursesystems.com/school/webpage/" + reader.nextString() + "/689493";
+                //The standard url for Teacher websites -------------(The unique identifier for the teacher)
+                id = "https://www.oncoursesystems.com/school/webpage/" + reader.nextString();
             }
-            else if (name.equals("text")) {
+            else if (name.equals("text")) { //Name fo the teacher
                 InfoArticle ab = new InfoArticle(reader.nextString(),id);
-                Results.add(ab);
+                Results.add(ab); //Add the information to the main data set
             }
 
             else {
@@ -198,6 +183,8 @@ public class HTMLPull {
         }
         reader.endObject();
     }
+
+    //Converts OnCourse school code into the corresponding subdomain
     public static String convertForSchool(String url, int School){
         switch(School)
         {

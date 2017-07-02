@@ -78,23 +78,23 @@ public class Calendar extends Fragment {
         }
         fDataSet = data;
         mListView = (ListView) view.findViewById(R.id.CalendarTable);
-        mAdapter = new StandardCellAdapter(getActivity(), data, 0,null,null);
+        mAdapter = new StandardCellAdapter(getActivity(), data, 0,null);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) { //Sets onClick Listener for the list cells
                 ContentDisplay fragment = ContentDisplay.newInstance(fDataSet.get(position).title,fDataSet.get(position).description);
                 FragmentTransaction transfer = getActivity().getSupportFragmentManager().beginTransaction();
-                transfer.replace(R.id.fragmentcontainer, fragment).addToBackStack("tag").commit();
+                transfer.replace(R.id.fragmentcontainer, fragment).addToBackStack("tag").commit(); //tag is to ensure reverse navigation
             }
         });
         mListView.setAdapter(mAdapter);
-        final SwipeRefreshLayout swipeLayout = (SwipeRefreshLayout) view.findViewById(R.id.calRefresh);
+        final SwipeRefreshLayout swipeLayout = (SwipeRefreshLayout) view.findViewById(R.id.calRefresh); //Swipe to refresh
         swipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 try {
                     fDataSet = getData();
-                    mAdapter = new StandardCellAdapter(getContext(), fDataSet, 0,null,null);
+                    mAdapter = new StandardCellAdapter(getContext(), fDataSet, 0,null);
                     mListView.setAdapter(mAdapter);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -104,9 +104,11 @@ public class Calendar extends Fragment {
         });
         return view;
     }
+
+    //Returns the data for all Calendar events for the specific school
     public ArrayList<InfoArticle> getData() throws IOException{
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getContext());
-        HTMLPull Connection = new HTMLPull();
+        HTMLPull Connection = new HTMLPull();                                           //OnCourse system school code
         return Connection.XmlPull("brrsd.org/apps/events2/events_rss.jsp?id=0",sharedPref.getInt("School", 14273));
     }
 }

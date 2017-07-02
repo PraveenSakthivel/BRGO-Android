@@ -37,10 +37,12 @@ public class Handbook extends Fragment {
         WebView mWebView = (WebView)v.findViewById(R.id.HandbookwebView);
         mWebView.getSettings().setJavaScriptEnabled(true);
         SharedPreferences sharedPref =  getActivity().getPreferences(Context.MODE_PRIVATE);
-        String url = "http://docs.google.com/gview?embedded=true&url=";
-        switch (sharedPref.getInt("School",14273))
+        String url = "http://docs.google.com/gview?embedded=true&url="; //No native pdf viewer so we open the pdfs through google docs
+        switch (sharedPref.getInt("School",14273)) //Limited because not all School Handbooks are available online
         {
+            //OnCourse school Identifier
             case 14273:
+                //Url to corresponding school handboo
                 url += "www.hs.brrsd.org/Forms%20and%20Documents//Opening%20of%20School%20Documents/Other%20Forms%20and%20Documents/Student%20Handbook%202016-2017.pdf";
                 break;
             case 14276:
